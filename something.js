@@ -4,7 +4,7 @@ var i = 1
 var update_des = false
 function rotate() {
     if (r) {
-        if (update_des) {
+        if (update_des || i == 1) {
             document.getElementById("description").innerHTML = "speed = "+i
             update_des = false
         }
