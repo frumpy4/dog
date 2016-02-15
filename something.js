@@ -3,7 +3,7 @@ var speed = 0
 var prev_speed = 0
 var des = ""
 var max = false
-var max_speed = 2000000
+var max_speed = 100000000
 
 function rotate() {
     max = speed >= max_speed
