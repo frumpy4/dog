@@ -1,3 +1,4 @@
+var r = false
 var d = 360
 var i = 1
 var update_des = false
@@ -16,4 +17,8 @@ function rotate() {
 function increase() {
     i *= 1.1
     update_des = true
+    if (!r) {
+        r = true
+        requestAnimationFrame(rotate);
+    }
 }
