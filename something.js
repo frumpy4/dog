@@ -31,7 +31,7 @@ function increase() {
     if (speed == 0) {
         speed++
     } else {
-        speed *= 1.1
+        speed *= (Math.random() + 1)
     }
 }
 requestAnimationFrame(rotate)
