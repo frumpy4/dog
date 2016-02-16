@@ -9,7 +9,7 @@ function rotate() {
     max = speed >= max_speed
     if (prev_speed != speed) {
         prev_speed = speed
-        des = "speed = "+speed
+        des = "speed = "+(speed.toFixed(3).replace(/\B(?=(\d{3})+(?!\d))/g, ","))
         if (max) {
             des = "the dog is going fast enough please spare him"
         }
@@ -31,7 +31,12 @@ function increase() {
     if (speed == 0) {
         speed++
     } else {
-        speed *= (Math.random() + 1)
+        speed += (speed/Math.floor(rand(18,22)))+1
     }
 }
+
+function rand(min, max) {
+    return Math.random()*(max-min)+min;
+}
+
 requestAnimationFrame(rotate)
