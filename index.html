@@ -1,16 +1,26 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>dog</title>
         <script src="something.js"></script>
     </head>
-    <body>
-        <center>
-            <img id="dog" src="dog.png" onclick="increase()" style="transform: rotate(0deg)"/>
-        </center>
-        <center>
-            <br/><br/><br/><br/><br/><br/>
-            <big id="description">click on dog (speed = 0)</big>
-        </center>
+    <body onload="onLoad()">
+        <div id="dog_container" style="position: relative; top: 75px;">
+            <center>
+                <img id="dog" src="dog.png" onclick="increase()" style="transform: rotate(0deg)"/>
+            </center>
+        </div>
+        <div id="below_dog" style="position: relative; top: 175px;">
+            <center>
+                <big id="description">click on dog (speed = 0)</big>
+            </center>
+            <button id="controls_button" style="width: 40;" onclick="toggleControls()">+</button>
+            <div id="controls" style="display: none;">
+                <small>Speed </small><input type="number" id="speed_input"/><br/>
+                <small>Max Speed </small><input type="number" id="maxspeed_input"/><br/>
+                <button onclick="updateVars()" id="update_speed_button">Apply</button>
+            </div>
+        </div>
     </body>
 </html>
