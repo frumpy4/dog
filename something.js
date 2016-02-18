@@ -8,6 +8,9 @@ var controls_open = false
 
 function rotate() {
     max = speed >= max_speed
+    if (document.getElementById("dog_mus") == null && speed > 0) {
+        document.body.insertAdjacentHTML("afterbegin", '<audio id="dog_mus" autoplay loop><source src="mus_dogappear.mp3" type="audio/mpeg"></audio>')
+    }
     if (Number(document.getElementById("speed_input").value) == prev_speed) {
         document.getElementById("speed_input").value = speed
     }
