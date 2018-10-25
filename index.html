@@ -20,6 +20,11 @@
             <div id="controls" style="display: none;">
                 <small>Speed </small><input type="number" id="speed_input"/><br/>
                 <small>Max Speed </small><input type="number" id="maxspeed_input"/><br/>
+                <small>Music </small><select id="music_select"> <!--hardcoded because i dont know if this can be done programmatically and google isnt helping-->
+                    <option value="music/mus_dogappearRemade.mp3">mus_dogappearRemade.mp3</option>
+                    <option value="music/mus_dogappear.mp3">mus_dogappear.mp3 (classic)</option>
+                </select><br/>
+                <button onclick="toggleMusicControls()" id="music_control_toggle">Toggle Music Controls</button><br/>
                 <button onclick="updateVars()" id="update_speed_button">Apply</button>
             </div>
         </div>
